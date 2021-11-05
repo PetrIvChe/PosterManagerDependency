@@ -24,7 +24,7 @@ class PosterManagerTest {
     public void shouldAdd1MovieOnPoster() {
         PosterManager manager = new PosterManager();
         manager.addMovie(bladshot);
-        PosterItem[] actual = manager.getItems();
+        PosterItem[] actual = manager.getFromLastAddedMovie();
         PosterItem[] expected = new PosterItem[]{bladshot};
         assertArrayEquals(actual, expected);
     }
